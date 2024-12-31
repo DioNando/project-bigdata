@@ -1,0 +1,30 @@
+[2024-12-30T21:43:22.827+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T21:43:22.856+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_kafka.fetch_data_and_push_to_kafka manual__2024-12-30T20:43:03.830084+00:00 [queued]>
+[2024-12-30T21:43:22.874+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_kafka.fetch_data_and_push_to_kafka manual__2024-12-30T20:43:03.830084+00:00 [queued]>
+[2024-12-30T21:43:22.875+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T21:43:22.904+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data_and_push_to_kafka> on 2024-12-30 20:43:03.830084+00:00
+[2024-12-30T21:43:22.927+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=147) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T21:43:22.939+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_kafka', 'fetch_data_and_push_to_kafka', 'manual__2024-12-30T20:43:03.830084+00:00', '--job-id', '866', '--raw', '--subdir', 'DAGS_FOLDER/weather_kafka_producer.py', '--cfg-path', '/tmp/tmp6ioe1zle']
+[2024-12-30T21:43:22.941+0000] {standard_task_runner.py:72} INFO - Started process 161 to run task
+[2024-12-30T21:43:22.943+0000] {standard_task_runner.py:105} INFO - Job 866: Subtask fetch_data_and_push_to_kafka
+[2024-12-30T21:43:23.175+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_kafka.fetch_data_and_push_to_kafka manual__2024-12-30T20:43:03.830084+00:00 [running]> on host 865c783184f2
+[2024-12-30T21:43:23.448+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_kafka' AIRFLOW_CTX_TASK_ID='fetch_data_and_push_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T20:43:03.830084+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-30T20:43:03.830084+00:00'
+[2024-12-30T21:43:23.451+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T21:43:23.624+0000] {conn.py:362} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T21:43:23.625+0000] {conn.py:957} INFO - Probing node bootstrap-0 broker version
+[2024-12-30T21:43:23.627+0000] {conn.py:393} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T21:43:23.734+0000] {conn.py:1019} INFO - Broker version identified as 2.6.0
+[2024-12-30T21:43:23.735+0000] {conn.py:1020} INFO - Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+[2024-12-30T21:43:25.106+0000] {conn.py:362} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T21:43:25.107+0000] {conn.py:393} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T21:43:25.108+0000] {conn.py:673} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.26.0.8', 9092)]>: Closing connection. 
+[2024-12-30T21:43:25.135+0000] {kafka.py:486} INFO - Closing the Kafka producer with 9223372036.0 secs timeout.
+[2024-12-30T21:43:25.144+0000] {conn.py:673} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connected> [IPv4 ('172.26.0.8', 9092)]>: Closing connection. 
+[2024-12-30T21:43:25.150+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-30T21:43:25.182+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T21:43:25.190+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_kafka, task_id=fetch_data_and_push_to_kafka, run_id=manual__2024-12-30T20:43:03.830084+00:00, execution_date=20241230T204303, start_date=20241230T214322, end_date=20241230T214325
+[2024-12-30T21:43:25.284+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T21:43:25.380+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T21:43:25.386+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

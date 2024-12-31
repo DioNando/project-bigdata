@@ -1,0 +1,25 @@
+[2024-12-30T21:42:30.693+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T21:42:30.721+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_mongo_pipeline.send_success_email manual__2024-12-30T21:42:25.221266+00:00 [queued]>
+[2024-12-30T21:42:30.733+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_mongo_pipeline.send_success_email manual__2024-12-30T21:42:25.221266+00:00 [queued]>
+[2024-12-30T21:42:30.734+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T21:42:30.748+0000] {taskinstance.py:2889} INFO - Executing <Task(EmailOperator): send_success_email> on 2024-12-30 21:42:25.221266+00:00
+[2024-12-30T21:42:30.755+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=131) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T21:42:30.758+0000] {standard_task_runner.py:72} INFO - Started process 132 to run task
+[2024-12-30T21:42:30.758+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_mongo_pipeline', 'send_success_email', 'manual__2024-12-30T21:42:25.221266+00:00', '--job-id', '860', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_mongo_pipeline.py', '--cfg-path', '/tmp/tmp_b3gl5lx']
+[2024-12-30T21:42:30.759+0000] {standard_task_runner.py:105} INFO - Job 860: Subtask send_success_email
+[2024-12-30T21:42:30.803+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_mongo_pipeline.send_success_email manual__2024-12-30T21:42:25.221266+00:00 [running]> on host 865c783184f2
+[2024-12-30T21:42:30.887+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_mongo_pipeline' AIRFLOW_CTX_TASK_ID='send_success_email' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T21:42:25.221266+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-30T21:42:25.221266+00:00'
+[2024-12-30T21:42:30.888+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T21:42:30.906+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/email.py:155: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-12-30T21:42:30.907+0000] {configuration.py:1073} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-12-30T21:42:30.908+0000] {email.py:272} INFO - Email alerting: attempt 1
+[2024-12-30T21:42:31.019+0000] {email.py:283} INFO - Sent an alert email to ['your_email@example.com']
+[2024-12-30T21:42:31.056+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T21:42:31.057+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=kafka_to_mongo_pipeline, task_id=send_success_email, run_id=manual__2024-12-30T21:42:25.221266+00:00, execution_date=20241230T214225, start_date=20241230T214230, end_date=20241230T214231
+[2024-12-30T21:42:31.094+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T21:42:31.113+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T21:42:31.116+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

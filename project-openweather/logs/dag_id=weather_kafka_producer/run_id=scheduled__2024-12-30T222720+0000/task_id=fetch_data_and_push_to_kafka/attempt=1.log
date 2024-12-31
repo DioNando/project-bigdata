@@ -1,0 +1,30 @@
+[2024-12-30T22:27:26.194+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T22:27:26.207+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka scheduled__2024-12-30T22:27:20+00:00 [queued]>
+[2024-12-30T22:27:26.213+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka scheduled__2024-12-30T22:27:20+00:00 [queued]>
+[2024-12-30T22:27:26.213+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T22:27:26.227+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data_and_push_to_kafka> on 2024-12-30 22:27:20+00:00
+[2024-12-30T22:27:26.234+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=599) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T22:27:26.236+0000] {standard_task_runner.py:72} INFO - Started process 600 to run task
+[2024-12-30T22:27:26.236+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_kafka_producer', 'fetch_data_and_push_to_kafka', 'scheduled__2024-12-30T22:27:20+00:00', '--job-id', '1098', '--raw', '--subdir', 'DAGS_FOLDER/weather_kafka_producer.py', '--cfg-path', '/tmp/tmp0qwopkwq']
+[2024-12-30T22:27:26.237+0000] {standard_task_runner.py:105} INFO - Job 1098: Subtask fetch_data_and_push_to_kafka
+[2024-12-30T22:27:26.275+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka scheduled__2024-12-30T22:27:20+00:00 [running]> on host 3bad290ab57a
+[2024-12-30T22:27:26.339+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_kafka_producer' AIRFLOW_CTX_TASK_ID='fetch_data_and_push_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T22:27:20+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-30T22:27:20+00:00'
+[2024-12-30T22:27:26.340+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T22:27:26.355+0000] {conn.py:362} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T22:27:26.356+0000] {conn.py:957} INFO - Probing node bootstrap-0 broker version
+[2024-12-30T22:27:26.357+0000] {conn.py:393} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T22:27:26.460+0000] {conn.py:1019} INFO - Broker version identified as 2.6.0
+[2024-12-30T22:27:26.461+0000] {conn.py:1020} INFO - Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+[2024-12-30T22:27:26.632+0000] {logging_mixin.py:190} INFO - Weather data for city ID 1053384 published to Kafka successfully.
+[2024-12-30T22:27:26.632+0000] {conn.py:362} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T22:27:26.633+0000] {conn.py:393} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T22:27:26.634+0000] {conn.py:673} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.26.0.8', 9092)]>: Closing connection. 
+[2024-12-30T22:27:26.640+0000] {conn.py:673} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connected> [IPv4 ('172.26.0.8', 9092)]>: Closing connection. 
+[2024-12-30T22:27:26.641+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-30T22:27:26.649+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T22:27:26.650+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_kafka_producer, task_id=fetch_data_and_push_to_kafka, run_id=scheduled__2024-12-30T22:27:20+00:00, execution_date=20241230T222720, start_date=20241230T222726, end_date=20241230T222726
+[2024-12-30T22:27:26.691+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T22:27:26.709+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T22:27:26.711+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

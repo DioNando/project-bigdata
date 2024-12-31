@@ -1,0 +1,99 @@
+[2024-12-31T00:30:09.572+0000] {processor.py:186} INFO - Started process (PID=64) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:09.573+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:30:09.576+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:30:09.575+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:10.062+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:30:10.057+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/fetch_reddit_comments.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_reddit_comments.py", line 27, in <module>
+    raise ValueError("REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.")
+ValueError: REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.
+[2024-12-31T00:30:10.067+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:10.095+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.531 seconds
+[2024-12-31T00:30:40.431+0000] {processor.py:186} INFO - Started process (PID=77) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:40.434+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:30:40.436+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:30:40.436+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:40.827+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:30:40.823+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/fetch_reddit_comments.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_reddit_comments.py", line 27, in <module>
+    raise ValueError("REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.")
+ValueError: REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.
+[2024-12-31T00:30:40.828+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:30:40.849+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.426 seconds
+[2024-12-31T00:31:11.026+0000] {processor.py:186} INFO - Started process (PID=84) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:11.027+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:31:11.029+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:31:11.029+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:11.303+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:31:11.300+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/fetch_reddit_comments.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_reddit_comments.py", line 27, in <module>
+    raise ValueError("REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.")
+ValueError: REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.
+[2024-12-31T00:31:11.305+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:11.319+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.299 seconds
+[2024-12-31T00:31:41.542+0000] {processor.py:186} INFO - Started process (PID=91) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:41.543+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:31:41.545+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:31:41.545+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:41.814+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:31:41.811+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/fetch_reddit_comments.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/fetch_reddit_comments.py", line 27, in <module>
+    raise ValueError("REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.")
+ValueError: REDDIT_ACCESS_TOKEN est manquant dans les variables d'environnement.
+[2024-12-31T00:31:41.815+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:31:41.830+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.293 seconds
+[2024-12-31T00:32:45.317+0000] {processor.py:186} INFO - Started process (PID=65) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:32:45.318+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:32:45.324+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:45.323+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:32:46.147+0000] {processor.py:925} INFO - DAG(s) 'fetch_reddit_comments' retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:32:46.492+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.489+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG:fetch_reddit_comments
+[2024-12-31T00:32:46.517+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.516+0000] {override.py:1911} INFO - Created Permission View: can edit on DAG:fetch_reddit_comments
+[2024-12-31T00:32:46.540+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.538+0000] {override.py:1911} INFO - Created Permission View: can read on DAG:fetch_reddit_comments
+[2024-12-31T00:32:46.554+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.554+0000] {override.py:1911} INFO - Created Permission View: can delete on DAG Run:fetch_reddit_comments
+[2024-12-31T00:32:46.563+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.563+0000] {override.py:1911} INFO - Created Permission View: menu access on DAG Run:fetch_reddit_comments
+[2024-12-31T00:32:46.572+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.571+0000] {override.py:1911} INFO - Created Permission View: can create on DAG Run:fetch_reddit_comments
+[2024-12-31T00:32:46.581+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.581+0000] {override.py:1911} INFO - Created Permission View: can read on DAG Run:fetch_reddit_comments
+[2024-12-31T00:32:46.582+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.582+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-31T00:32:46.607+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.607+0000] {dag.py:3262} INFO - Creating ORM DAG for fetch_reddit_comments
+[2024-12-31T00:32:46.634+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:32:46.633+0000] {dag.py:4180} INFO - Setting next_dagrun for fetch_reddit_comments to 2024-12-31 00:00:00+00:00, run_after=2025-01-01 00:00:00+00:00
+[2024-12-31T00:32:46.681+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 1.375 seconds
+[2024-12-31T00:33:16.960+0000] {processor.py:186} INFO - Started process (PID=78) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:16.961+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:33:16.963+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:16.963+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:17.241+0000] {processor.py:925} INFO - DAG(s) 'fetch_reddit_comments' retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:17.261+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:17.260+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-31T00:33:17.281+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:17.281+0000] {dag.py:4180} INFO - Setting next_dagrun for fetch_reddit_comments to 2024-12-31 00:00:00+00:00, run_after=2025-01-01 00:00:00+00:00
+[2024-12-31T00:33:17.297+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.344 seconds
+[2024-12-31T00:33:47.523+0000] {processor.py:186} INFO - Started process (PID=85) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:47.524+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:33:47.527+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:47.527+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:47.794+0000] {processor.py:925} INFO - DAG(s) 'fetch_reddit_comments' retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:33:47.820+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:47.820+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-31T00:33:47.843+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:33:47.843+0000] {dag.py:4180} INFO - Setting next_dagrun for fetch_reddit_comments to 2024-12-31 00:00:00+00:00, run_after=2025-01-01 00:00:00+00:00
+[2024-12-31T00:33:47.860+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.343 seconds
+[2024-12-31T00:34:18.067+0000] {processor.py:186} INFO - Started process (PID=92) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:18.068+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:34:18.070+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:18.070+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:18.319+0000] {processor.py:925} INFO - DAG(s) 'fetch_reddit_comments' retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:18.337+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:18.337+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-31T00:34:18.354+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:18.354+0000] {dag.py:4180} INFO - Setting next_dagrun for fetch_reddit_comments to 2024-12-31 00:00:00+00:00, run_after=2025-01-01 00:00:00+00:00
+[2024-12-31T00:34:18.370+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.308 seconds
+[2024-12-31T00:34:48.604+0000] {processor.py:186} INFO - Started process (PID=99) to work on /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:48.605+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/fetch_reddit_comments.py for tasks to queue
+[2024-12-31T00:34:48.607+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:48.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:48.877+0000] {processor.py:925} INFO - DAG(s) 'fetch_reddit_comments' retrieved from /opt/airflow/dags/fetch_reddit_comments.py
+[2024-12-31T00:34:48.897+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:48.897+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-31T00:34:48.916+0000] {logging_mixin.py:190} INFO - [2024-12-31T00:34:48.916+0000] {dag.py:4180} INFO - Setting next_dagrun for fetch_reddit_comments to 2024-12-31 00:00:00+00:00, run_after=2025-01-01 00:00:00+00:00
+[2024-12-31T00:34:48.931+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/fetch_reddit_comments.py took 0.333 seconds

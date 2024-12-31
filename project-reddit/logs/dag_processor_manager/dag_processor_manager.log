@@ -1,0 +1,90 @@
+[2024-12-31T00:27:17.600+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-12-31T00:27:17.601+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-31T00:27:17.601+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-12-31T00:27:17.602+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-12-31T00:27:17.606+0000] {manager.py:824} INFO - There are 0 files in /opt/airflow/dags
+[2024-12-31T00:29:13.151+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-12-31T00:30:09.471+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-12-31T00:30:09.472+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-31T00:30:09.473+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-12-31T00:30:09.473+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-12-31T00:30:09.482+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2024-12-31T00:30:09.574+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py     64  0.03s             0           0                                                   0
+================================================================================
+[2024-12-31T00:30:39.779+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           0           1  0.57s           2024-12-31T00:30:10                       3
+================================================================================
+[2024-12-31T00:31:09.996+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           0           1  0.46s           2024-12-31T00:30:40                       5
+================================================================================
+[2024-12-31T00:31:40.239+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           0           1  0.32s           2024-12-31T00:31:11                       5
+================================================================================
+[2024-12-31T00:31:53.139+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-12-31T00:32:45.203+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-12-31T00:32:45.204+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-12-31T00:32:45.205+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-12-31T00:32:45.205+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-12-31T00:32:45.224+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2024-12-31T00:32:45.336+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                     PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py     65  0.04s             0           0                                                   0
+================================================================================
+[2024-12-31T00:33:15.577+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           1           0  1.42s           2024-12-31T00:32:46                      45
+================================================================================
+[2024-12-31T00:33:46.159+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           1           0  0.37s           2024-12-31T00:33:17                      12
+================================================================================
+[2024-12-31T00:34:16.717+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           1           0  0.36s           2024-12-31T00:33:47                      12
+================================================================================
+[2024-12-31T00:34:47.250+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                   PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/fetch_reddit_comments.py                           1           0  0.33s           2024-12-31T00:34:18                      12
+================================================================================
+[2024-12-31T00:35:01.435+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15

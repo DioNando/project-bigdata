@@ -1,0 +1,26 @@
+[2024-12-30T20:25:42.097+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T20:25:42.113+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_data_pipeline_mongodb.transform_data manual__2024-12-30T20:25:39.072410+00:00 [queued]>
+[2024-12-30T20:25:42.121+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_data_pipeline_mongodb.transform_data manual__2024-12-30T20:25:39.072410+00:00 [queued]>
+[2024-12-30T20:25:42.122+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T20:25:42.136+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): transform_data> on 2024-12-30 20:25:39.072410+00:00
+[2024-12-30T20:25:42.146+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2299) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T20:25:42.148+0000] {standard_task_runner.py:72} INFO - Started process 2304 to run task
+[2024-12-30T20:25:42.148+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_data_pipeline_mongodb', 'transform_data', 'manual__2024-12-30T20:25:39.072410+00:00', '--job-id', '438', '--raw', '--subdir', 'DAGS_FOLDER/etl_data_pipeline_mongodb.py', '--cfg-path', '/tmp/tmpmjlijwlg']
+[2024-12-30T20:25:42.151+0000] {standard_task_runner.py:105} INFO - Job 438: Subtask transform_data
+[2024-12-30T20:25:42.194+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_data_pipeline_mongodb.transform_data manual__2024-12-30T20:25:39.072410+00:00 [running]> on host f4979116b9f3
+[2024-12-30T20:25:42.269+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_data_pipeline_mongodb' AIRFLOW_CTX_TASK_ID='transform_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T20:25:39.072410+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-30T20:25:39.072410+00:00'
+[2024-12-30T20:25:42.271+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T20:25:42.388+0000] {logging_mixin.py:190} INFO - Données brutes :
+[2024-12-30T20:25:42.397+0000] {logging_mixin.py:190} INFO - Empty DataFrame
+Columns: [{"cod":"200", message:0, cnt:40, list:[{"dt":1735592400, main:{"temp":1.32, feels_like:-0.09, temp_min:1.32, temp_max:3.53, pressure:1031, sea_level:1031, grnd_level:1021, humidity:95, temp_kf:-2.21}, weather:[{"id":804, main:"Clouds", description:"couvert", icon:"04n"}], clouds:{"all":100}, wind:{"speed":1.4, deg:183, gust:2.07}, visibility:10000, pop:0, sys:{"pod":"n"}, dt_txt:"2024-12-30 21:00:00"}, {"dt":1735603200, main:{"temp":1.81, feels_like:-0.08, temp_min:1.81, temp_max:2.78, pressure:1031.1, sea_level:1031.1, grnd_level:1020, humidity:89, temp_kf:-0.97}, weather:[{"id":804.1, main:"Clouds".1, description:"couvert".1, icon:"04n"}].1, clouds:{"all":94}, wind:{"speed":1.78, deg:201, gust:5.19}, visibility:10000.1, pop:0.1, sys:{"pod":"n"}.1, dt_txt:"2024-12-31 00:00:00"}, {"dt":1735614000, main:{"temp":1.93, feels_like:0.22, temp_min:1.93, temp_max:2.24, pressure:1030, sea_level:1030, grnd_level:1020.1, humidity:82, temp_kf:-0.31}, weather:[{"id":803, main:"Clouds".2, description:"nuageux", icon:"04n"}].2, clouds:{"all":79}, wind:{"speed":1.66, deg:200, gust:4.8}, visibility:10000.2, pop:0.3, sys:{"pod":"n"}.2, dt_txt:"2024-12-31 03:00:00"}, {"dt":1735624800, main:{"temp":1.91, feels_like:-0.37, temp_min:1.91, temp_max:1.91, pressure:1029, sea_level:1029, grnd_level:1019, humidity:84, temp_kf:0}, weather:[{"id":803.1, main:"Clouds".3, description:"nuageux".1, icon:"04n"}].3, clouds:{"all":71}, wind:{"speed":2.12, deg:199, gust:6.69}, visibility:10000.3, pop:0.4, sys:{"pod":"n"}.3, dt_txt:"2024-12-31 06:00:00"}, {"dt":1735635600, main:{"temp":2.1, feels_like:-0.28, temp_min:2.1, temp_max:2.1, pressure:1030.1, sea_level:1030.1, grnd_level:1019.1, humidity:80, ...]
+Index: []
+
+[0 rows x 897 columns]
+[2024-12-30T20:25:42.400+0000] {logging_mixin.py:190} INFO - Données nettoyées et sauvegardées sous /tmp/cleaned_data.json
+[2024-12-30T20:25:42.401+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-30T20:25:42.414+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T20:25:42.415+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_data_pipeline_mongodb, task_id=transform_data, run_id=manual__2024-12-30T20:25:39.072410+00:00, execution_date=20241230T202539, start_date=20241230T202542, end_date=20241230T202542
+[2024-12-30T20:25:42.443+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T20:25:42.455+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

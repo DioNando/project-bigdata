@@ -1,0 +1,25 @@
+[2024-12-30T22:39:37.624+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T22:39:37.639+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_kafka_producer.send_success_email scheduled__2024-12-30T22:39:30+00:00 [queued]>
+[2024-12-30T22:39:37.646+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_kafka_producer.send_success_email scheduled__2024-12-30T22:39:30+00:00 [queued]>
+[2024-12-30T22:39:37.647+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T22:39:37.660+0000] {taskinstance.py:2889} INFO - Executing <Task(EmailOperator): send_success_email> on 2024-12-30 22:39:30+00:00
+[2024-12-30T22:39:37.667+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=605) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T22:39:37.669+0000] {standard_task_runner.py:72} INFO - Started process 606 to run task
+[2024-12-30T22:39:37.669+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_kafka_producer', 'send_success_email', 'scheduled__2024-12-30T22:39:30+00:00', '--job-id', '1345', '--raw', '--subdir', 'DAGS_FOLDER/weather_kafka_producer.py', '--cfg-path', '/tmp/tmpzlgkvmci']
+[2024-12-30T22:39:37.670+0000] {standard_task_runner.py:105} INFO - Job 1345: Subtask send_success_email
+[2024-12-30T22:39:37.712+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_kafka_producer.send_success_email scheduled__2024-12-30T22:39:30+00:00 [running]> on host bb8001553f86
+[2024-12-30T22:39:37.801+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_kafka_producer' AIRFLOW_CTX_TASK_ID='send_success_email' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T22:39:30+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-30T22:39:30+00:00'
+[2024-12-30T22:39:37.803+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T22:39:37.825+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/email.py:155: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-12-30T22:39:37.826+0000] {configuration.py:1073} WARNING - section/key [smtp/smtp_user] not found in config
+[2024-12-30T22:39:37.826+0000] {email.py:272} INFO - Email alerting: attempt 1
+[2024-12-30T22:39:37.929+0000] {email.py:283} INFO - Sent an alert email to ['your_email@example.com']
+[2024-12-30T22:39:37.944+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T22:39:37.945+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_kafka_producer, task_id=send_success_email, run_id=scheduled__2024-12-30T22:39:30+00:00, execution_date=20241230T223930, start_date=20241230T223937, end_date=20241230T223937
+[2024-12-30T22:39:37.965+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T22:39:37.979+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T22:39:37.981+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

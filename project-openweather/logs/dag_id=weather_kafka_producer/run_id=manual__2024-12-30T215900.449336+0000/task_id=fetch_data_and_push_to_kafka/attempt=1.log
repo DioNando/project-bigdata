@@ -1,0 +1,21 @@
+[2024-12-30T21:59:01.169+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T21:59:01.186+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka manual__2024-12-30T21:59:00.449336+00:00 [queued]>
+[2024-12-30T21:59:01.195+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka manual__2024-12-30T21:59:00.449336+00:00 [queued]>
+[2024-12-30T21:59:01.196+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-30T21:59:01.210+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): fetch_data_and_push_to_kafka> on 2024-12-30 21:59:00.449336+00:00
+[2024-12-30T21:59:01.217+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=445) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T21:59:01.219+0000] {standard_task_runner.py:72} INFO - Started process 446 to run task
+[2024-12-30T21:59:01.219+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'weather_kafka_producer', 'fetch_data_and_push_to_kafka', 'manual__2024-12-30T21:59:00.449336+00:00', '--job-id', '883', '--raw', '--subdir', 'DAGS_FOLDER/weather_kafka_producer.py', '--cfg-path', '/tmp/tmp12zu0kkr']
+[2024-12-30T21:59:01.220+0000] {standard_task_runner.py:105} INFO - Job 883: Subtask fetch_data_and_push_to_kafka
+[2024-12-30T21:59:01.274+0000] {task_command.py:467} INFO - Running <TaskInstance: weather_kafka_producer.fetch_data_and_push_to_kafka manual__2024-12-30T21:59:00.449336+00:00 [running]> on host 865c783184f2
+[2024-12-30T21:59:01.389+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='weather_kafka_producer' AIRFLOW_CTX_TASK_ID='fetch_data_and_push_to_kafka' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T21:59:00.449336+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-30T21:59:00.449336+00:00'
+[2024-12-30T21:59:01.390+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T21:59:01.587+0000] {logging_mixin.py:190} INFO - Error publishing to Kafka: name 'producer' is not defined
+[2024-12-30T21:59:01.588+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-30T21:59:01.596+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T21:59:01.596+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=weather_kafka_producer, task_id=fetch_data_and_push_to_kafka, run_id=manual__2024-12-30T21:59:00.449336+00:00, execution_date=20241230T215900, start_date=20241230T215901, end_date=20241230T215901
+[2024-12-30T21:59:01.636+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-30T21:59:01.656+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T21:59:01.659+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

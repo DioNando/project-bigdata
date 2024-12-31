@@ -1,0 +1,116 @@
+[2024-12-30T20:29:02.956+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-30T20:29:02.970+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: kafka_to_mongo_pipeline.consume_kafka_and_store_to_mongo manual__2024-12-30T20:23:58.043387+00:00 [queued]>
+[2024-12-30T20:29:02.977+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: kafka_to_mongo_pipeline.consume_kafka_and_store_to_mongo manual__2024-12-30T20:23:58.043387+00:00 [queued]>
+[2024-12-30T20:29:02.978+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-30T20:29:02.989+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): consume_kafka_and_store_to_mongo> on 2024-12-30 20:23:58.043387+00:00
+[2024-12-30T20:29:03.000+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2525) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-30T20:29:03.002+0000] {standard_task_runner.py:72} INFO - Started process 2526 to run task
+[2024-12-30T20:29:03.003+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'kafka_to_mongo_pipeline', 'consume_kafka_and_store_to_mongo', 'manual__2024-12-30T20:23:58.043387+00:00', '--job-id', '482', '--raw', '--subdir', 'DAGS_FOLDER/kafka_to_mongo_pipeline.py', '--cfg-path', '/tmp/tmpz_gf1po2']
+[2024-12-30T20:29:03.005+0000] {standard_task_runner.py:105} INFO - Job 482: Subtask consume_kafka_and_store_to_mongo
+[2024-12-30T20:29:03.048+0000] {task_command.py:467} INFO - Running <TaskInstance: kafka_to_mongo_pipeline.consume_kafka_and_store_to_mongo manual__2024-12-30T20:23:58.043387+00:00 [running]> on host f4979116b9f3
+[2024-12-30T20:29:03.128+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='kafka_to_mongo_pipeline' AIRFLOW_CTX_TASK_ID='consume_kafka_and_store_to_mongo' AIRFLOW_CTX_EXECUTION_DATE='2024-12-30T20:23:58.043387+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-30T20:23:58.043387+00:00'
+[2024-12-30T20:29:03.129+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-30T20:29:03.144+0000] {conn.py:362} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T20:29:03.145+0000] {conn.py:957} INFO - Probing node bootstrap-0 broker version
+[2024-12-30T20:29:03.146+0000] {conn.py:393} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T20:29:03.249+0000] {conn.py:1019} INFO - Broker version identified as 2.6.0
+[2024-12-30T20:29:03.250+0000] {conn.py:1020} INFO - Set configuration api_version=(2, 6, 0) to skip auto check_version requests on startup
+[2024-12-30T20:29:03.251+0000] {consumer.py:122} WARNING - group_id is None: disabling auto-commit.
+[2024-12-30T20:29:03.251+0000] {subscription_state.py:167} INFO - Updating subscribed topics to: ('bigdata_topic',)
+[2024-12-30T20:29:03.268+0000] {subscription_state.py:253} INFO - Updated partition assignment: [('bigdata_topic', 0)]
+[2024-12-30T20:29:03.269+0000] {conn.py:362} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: connecting to kafka:9092 [('172.26.0.8', 9092) IPv4]
+[2024-12-30T20:29:03.270+0000] {conn.py:393} INFO - <BrokerConnection node_id=1 host=kafka:9092 <connecting> [IPv4 ('172.26.0.8', 9092)]>: Connection complete.
+[2024-12-30T20:29:03.271+0000] {conn.py:673} INFO - <BrokerConnection node_id=bootstrap-0 host=kafka:9092 <connected> [IPv4 ('172.26.0.8', 9092)]>: Closing connection. 
+[2024-12-30T20:29:03.376+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/kafka_to_mongo_pipeline.py", line 76, in consume_kafka_and_store_to_mongo
+    processed_data = {"title": message.value["title"].upper()}  # Exemple de traitement
+                               ~~~~~~~~~~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[2024-12-30T20:29:03.387+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=kafka_to_mongo_pipeline, task_id=consume_kafka_and_store_to_mongo, run_id=manual__2024-12-30T20:23:58.043387+00:00, execution_date=20241230T202358, start_date=20241230T202902, end_date=20241230T202903
+[2024-12-30T20:29:03.400+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-30T20:29:03.401+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 482 for task consume_kafka_and_store_to_mongo (string indices must be integers, not 'str'; 2526)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/kafka_to_mongo_pipeline.py", line 76, in consume_kafka_and_store_to_mongo
+    processed_data = {"title": message.value["title"].upper()}  # Exemple de traitement
+                               ~~~~~~~~~~~~~^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+[2024-12-30T20:29:03.419+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2024-12-30T20:29:03.439+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-12-30T20:29:03.442+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
